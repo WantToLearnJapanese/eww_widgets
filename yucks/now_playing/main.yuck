@@ -128,14 +128,14 @@
           (button
             :halign "center"
             :valign "center"
-            :onclick "playerctl stop"
-            ""
+            :onclick "playerctl previous"
+            "󰒮"
           )
           (button
             :halign "center"
             :valign "center"
-            :onclick "playerctl previous"
-            "󰒮"
+            :onclick "playerctl stop"
+            ""
           )
           (button
             :halign "center"

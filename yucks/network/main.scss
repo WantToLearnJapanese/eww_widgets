@@ -1,12 +1,12 @@
 .network {
-    background-color: #2e2e2e;
-    border-radius: 15px;
-    // border: 1px solid white;
-    padding: 12px;
-    margin-right: 10px;
-    .icon, .label {
-        padding: 0;
-        text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
-    }
-    box-shadow: rgba(0, 0, 0, 0.8) 1.95px 1.95px 2.6px;
+  background-color: #2e2e2e;
+  border-radius: 15px;
+  padding: 12px;
+  margin-right: 10px;
+  .icon,
+  .label {
+    padding: 0;
+    text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
+  }
+  box-shadow: rgba(0, 0, 0, 0.8) 1.95px 1.95px 2.6px;
 }

@@ -92,14 +92,14 @@ class Icon:
             if icon_path.exists():
                 Icon._ICON_PATH_CACHE[(window_class, window_class2)] = str(icon_path)
                 return str(icon_path)
-
-        target_stem = window_class
+        target_stems = [window_class, window_class2, window_class2.lower().replace(" ", "-")]
         if window_class2 == "Google-chrome" and window_class.startswith("crx_"):
             target_stem = window_class.replace("crx_", "chrome-") + "-Default"
+            target_stems.append(target_stem)
 
         for path in paths:
             for f in path.rglob("*"):
-                if f.is_file() and f.stem == target_stem and f.suffix in exts:
+                if f.is_file() and f.suffix in exts and (any([f.stem.endswith(s) for s in target_stems]) or any([f.stem.startswith(s) for s in target_stems])):
                     p = (
                         Path.home() / f".cache/eww/{window_class}-{window_class2}{f.suffix}"
                     )  # type: Path
