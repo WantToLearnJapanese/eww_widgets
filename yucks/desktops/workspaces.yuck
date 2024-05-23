@@ -1,0 +1,4011 @@
+(defvar focused_desktop -1)
+(defvar focused_window -1)
+(defvar desktop_1_focused false)
+(defvar desktop_1_class "")
+(defvar desktop_1_icon "")
+(defvar desktop_1_label "")
+(defvar desktop_1_did -2)
+(defvar desktop_1_ts 0)
+(defvar desktop_1_visible false)
+(defvar window_1_1_focused false)
+(defvar window_1_1_class "")
+(defvar window_1_1_icon "")
+(defvar window_1_1_label "")
+(defvar window_1_1_visible true)
+(defvar window_1_1_nid "")
+(defwidget widget_window_1_1 []
+(revealer
+  :reveal {window_1_1_icon != "" || window_1_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_1_class} ${focused_window == window_1_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_1_nid} --flag hidden=off; bspc node -f ${window_1_1_nid}"
+      (box(image
+      :path window_1_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_1_label != ""}
+    )))
+  ))
+)
+(defvar window_1_2_focused false)
+(defvar window_1_2_class "")
+(defvar window_1_2_icon "")
+(defvar window_1_2_label "")
+(defvar window_1_2_visible true)
+(defvar window_1_2_nid "")
+(defwidget widget_window_1_2 []
+(revealer
+  :reveal {window_1_2_icon != "" || window_1_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_2_class} ${focused_window == window_1_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_2_nid} --flag hidden=off; bspc node -f ${window_1_2_nid}"
+      (box(image
+      :path window_1_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_2_label != ""}
+    )))
+  ))
+)
+(defvar window_1_3_focused false)
+(defvar window_1_3_class "")
+(defvar window_1_3_icon "")
+(defvar window_1_3_label "")
+(defvar window_1_3_visible true)
+(defvar window_1_3_nid "")
+(defwidget widget_window_1_3 []
+(revealer
+  :reveal {window_1_3_icon != "" || window_1_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_3_class} ${focused_window == window_1_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_3_nid} --flag hidden=off; bspc node -f ${window_1_3_nid}"
+      (box(image
+      :path window_1_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_3_label != ""}
+    )))
+  ))
+)
+(defvar window_1_4_focused false)
+(defvar window_1_4_class "")
+(defvar window_1_4_icon "")
+(defvar window_1_4_label "")
+(defvar window_1_4_visible true)
+(defvar window_1_4_nid "")
+(defwidget widget_window_1_4 []
+(revealer
+  :reveal {window_1_4_icon != "" || window_1_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_4_class} ${focused_window == window_1_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_4_nid} --flag hidden=off; bspc node -f ${window_1_4_nid}"
+      (box(image
+      :path window_1_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_4_label != ""}
+    )))
+  ))
+)
+(defvar window_1_5_focused false)
+(defvar window_1_5_class "")
+(defvar window_1_5_icon "")
+(defvar window_1_5_label "")
+(defvar window_1_5_visible true)
+(defvar window_1_5_nid "")
+(defwidget widget_window_1_5 []
+(revealer
+  :reveal {window_1_5_icon != "" || window_1_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_5_class} ${focused_window == window_1_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_5_nid} --flag hidden=off; bspc node -f ${window_1_5_nid}"
+      (box(image
+      :path window_1_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_5_label != ""}
+    )))
+  ))
+)
+(defvar window_1_6_focused false)
+(defvar window_1_6_class "")
+(defvar window_1_6_icon "")
+(defvar window_1_6_label "")
+(defvar window_1_6_visible true)
+(defvar window_1_6_nid "")
+(defwidget widget_window_1_6 []
+(revealer
+  :reveal {window_1_6_icon != "" || window_1_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_6_class} ${focused_window == window_1_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_6_nid} --flag hidden=off; bspc node -f ${window_1_6_nid}"
+      (box(image
+      :path window_1_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_6_label != ""}
+    )))
+  ))
+)
+(defvar window_1_7_focused false)
+(defvar window_1_7_class "")
+(defvar window_1_7_icon "")
+(defvar window_1_7_label "")
+(defvar window_1_7_visible true)
+(defvar window_1_7_nid "")
+(defwidget widget_window_1_7 []
+(revealer
+  :reveal {window_1_7_icon != "" || window_1_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_7_class} ${focused_window == window_1_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_7_nid} --flag hidden=off; bspc node -f ${window_1_7_nid}"
+      (box(image
+      :path window_1_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_7_label != ""}
+    )))
+  ))
+)
+(defvar window_1_8_focused false)
+(defvar window_1_8_class "")
+(defvar window_1_8_icon "")
+(defvar window_1_8_label "")
+(defvar window_1_8_visible true)
+(defvar window_1_8_nid "")
+(defwidget widget_window_1_8 []
+(revealer
+  :reveal {window_1_8_icon != "" || window_1_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_8_class} ${focused_window == window_1_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_8_nid} --flag hidden=off; bspc node -f ${window_1_8_nid}"
+      (box(image
+      :path window_1_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_8_label != ""}
+    )))
+  ))
+)
+(defvar window_1_9_focused false)
+(defvar window_1_9_class "")
+(defvar window_1_9_icon "")
+(defvar window_1_9_label "")
+(defvar window_1_9_visible true)
+(defvar window_1_9_nid "")
+(defwidget widget_window_1_9 []
+(revealer
+  :reveal {window_1_9_icon != "" || window_1_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_9_class} ${focused_window == window_1_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_9_nid} --flag hidden=off; bspc node -f ${window_1_9_nid}"
+      (box(image
+      :path window_1_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_9_label != ""}
+    )))
+  ))
+)
+(defvar window_1_10_focused false)
+(defvar window_1_10_class "")
+(defvar window_1_10_icon "")
+(defvar window_1_10_label "")
+(defvar window_1_10_visible true)
+(defvar window_1_10_nid "")
+(defwidget widget_window_1_10 []
+(revealer
+  :reveal {window_1_10_icon != "" || window_1_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_1_10_class} ${focused_window == window_1_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_1_10_nid} --flag hidden=off; bspc node -f ${window_1_10_nid}"
+      (box(image
+      :path window_1_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_1_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_1_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_1 []
+(revealer
+  :reveal {desktop_1_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_1_class} ${focused_desktop == desktop_1_did ? "focused" : "defocused"} ${desktop_1_icon != "" || desktop_1_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^1"
+      (box
+        (image
+          :path desktop_1_icon
+          :image-width {desktop_1_icon == "" ? 0 : 36}
+          :image-height {desktop_1_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_1_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_1_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_1_1)
+    (widget_window_1_2)
+    (widget_window_1_3)
+    (widget_window_1_4)
+    (widget_window_1_5)
+    (widget_window_1_6)
+    (widget_window_1_7)
+    (widget_window_1_8)
+    (widget_window_1_9)
+    (widget_window_1_10)
+  ))
+)
+(defvar desktop_2_focused false)
+(defvar desktop_2_class "")
+(defvar desktop_2_icon "")
+(defvar desktop_2_label "")
+(defvar desktop_2_did -2)
+(defvar desktop_2_ts 0)
+(defvar desktop_2_visible false)
+(defvar window_2_1_focused false)
+(defvar window_2_1_class "")
+(defvar window_2_1_icon "")
+(defvar window_2_1_label "")
+(defvar window_2_1_visible true)
+(defvar window_2_1_nid "")
+(defwidget widget_window_2_1 []
+(revealer
+  :reveal {window_2_1_icon != "" || window_2_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_1_class} ${focused_window == window_2_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_1_nid} --flag hidden=off; bspc node -f ${window_2_1_nid}"
+      (box(image
+      :path window_2_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_1_label != ""}
+    )))
+  ))
+)
+(defvar window_2_2_focused false)
+(defvar window_2_2_class "")
+(defvar window_2_2_icon "")
+(defvar window_2_2_label "")
+(defvar window_2_2_visible true)
+(defvar window_2_2_nid "")
+(defwidget widget_window_2_2 []
+(revealer
+  :reveal {window_2_2_icon != "" || window_2_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_2_class} ${focused_window == window_2_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_2_nid} --flag hidden=off; bspc node -f ${window_2_2_nid}"
+      (box(image
+      :path window_2_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_2_label != ""}
+    )))
+  ))
+)
+(defvar window_2_3_focused false)
+(defvar window_2_3_class "")
+(defvar window_2_3_icon "")
+(defvar window_2_3_label "")
+(defvar window_2_3_visible true)
+(defvar window_2_3_nid "")
+(defwidget widget_window_2_3 []
+(revealer
+  :reveal {window_2_3_icon != "" || window_2_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_3_class} ${focused_window == window_2_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_3_nid} --flag hidden=off; bspc node -f ${window_2_3_nid}"
+      (box(image
+      :path window_2_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_3_label != ""}
+    )))
+  ))
+)
+(defvar window_2_4_focused false)
+(defvar window_2_4_class "")
+(defvar window_2_4_icon "")
+(defvar window_2_4_label "")
+(defvar window_2_4_visible true)
+(defvar window_2_4_nid "")
+(defwidget widget_window_2_4 []
+(revealer
+  :reveal {window_2_4_icon != "" || window_2_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_4_class} ${focused_window == window_2_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_4_nid} --flag hidden=off; bspc node -f ${window_2_4_nid}"
+      (box(image
+      :path window_2_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_4_label != ""}
+    )))
+  ))
+)
+(defvar window_2_5_focused false)
+(defvar window_2_5_class "")
+(defvar window_2_5_icon "")
+(defvar window_2_5_label "")
+(defvar window_2_5_visible true)
+(defvar window_2_5_nid "")
+(defwidget widget_window_2_5 []
+(revealer
+  :reveal {window_2_5_icon != "" || window_2_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_5_class} ${focused_window == window_2_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_5_nid} --flag hidden=off; bspc node -f ${window_2_5_nid}"
+      (box(image
+      :path window_2_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_5_label != ""}
+    )))
+  ))
+)
+(defvar window_2_6_focused false)
+(defvar window_2_6_class "")
+(defvar window_2_6_icon "")
+(defvar window_2_6_label "")
+(defvar window_2_6_visible true)
+(defvar window_2_6_nid "")
+(defwidget widget_window_2_6 []
+(revealer
+  :reveal {window_2_6_icon != "" || window_2_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_6_class} ${focused_window == window_2_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_6_nid} --flag hidden=off; bspc node -f ${window_2_6_nid}"
+      (box(image
+      :path window_2_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_6_label != ""}
+    )))
+  ))
+)
+(defvar window_2_7_focused false)
+(defvar window_2_7_class "")
+(defvar window_2_7_icon "")
+(defvar window_2_7_label "")
+(defvar window_2_7_visible true)
+(defvar window_2_7_nid "")
+(defwidget widget_window_2_7 []
+(revealer
+  :reveal {window_2_7_icon != "" || window_2_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_7_class} ${focused_window == window_2_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_7_nid} --flag hidden=off; bspc node -f ${window_2_7_nid}"
+      (box(image
+      :path window_2_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_7_label != ""}
+    )))
+  ))
+)
+(defvar window_2_8_focused false)
+(defvar window_2_8_class "")
+(defvar window_2_8_icon "")
+(defvar window_2_8_label "")
+(defvar window_2_8_visible true)
+(defvar window_2_8_nid "")
+(defwidget widget_window_2_8 []
+(revealer
+  :reveal {window_2_8_icon != "" || window_2_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_8_class} ${focused_window == window_2_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_8_nid} --flag hidden=off; bspc node -f ${window_2_8_nid}"
+      (box(image
+      :path window_2_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_8_label != ""}
+    )))
+  ))
+)
+(defvar window_2_9_focused false)
+(defvar window_2_9_class "")
+(defvar window_2_9_icon "")
+(defvar window_2_9_label "")
+(defvar window_2_9_visible true)
+(defvar window_2_9_nid "")
+(defwidget widget_window_2_9 []
+(revealer
+  :reveal {window_2_9_icon != "" || window_2_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_9_class} ${focused_window == window_2_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_9_nid} --flag hidden=off; bspc node -f ${window_2_9_nid}"
+      (box(image
+      :path window_2_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_9_label != ""}
+    )))
+  ))
+)
+(defvar window_2_10_focused false)
+(defvar window_2_10_class "")
+(defvar window_2_10_icon "")
+(defvar window_2_10_label "")
+(defvar window_2_10_visible true)
+(defvar window_2_10_nid "")
+(defwidget widget_window_2_10 []
+(revealer
+  :reveal {window_2_10_icon != "" || window_2_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_2_10_class} ${focused_window == window_2_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_2_10_nid} --flag hidden=off; bspc node -f ${window_2_10_nid}"
+      (box(image
+      :path window_2_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_2_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_2_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_2 []
+(revealer
+  :reveal {desktop_2_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_2_class} ${focused_desktop == desktop_2_did ? "focused" : "defocused"} ${desktop_2_icon != "" || desktop_2_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^2"
+      (box
+        (image
+          :path desktop_2_icon
+          :image-width {desktop_2_icon == "" ? 0 : 36}
+          :image-height {desktop_2_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_2_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_2_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_2_1)
+    (widget_window_2_2)
+    (widget_window_2_3)
+    (widget_window_2_4)
+    (widget_window_2_5)
+    (widget_window_2_6)
+    (widget_window_2_7)
+    (widget_window_2_8)
+    (widget_window_2_9)
+    (widget_window_2_10)
+  ))
+)
+(defvar desktop_3_focused false)
+(defvar desktop_3_class "")
+(defvar desktop_3_icon "")
+(defvar desktop_3_label "")
+(defvar desktop_3_did -2)
+(defvar desktop_3_ts 0)
+(defvar desktop_3_visible false)
+(defvar window_3_1_focused false)
+(defvar window_3_1_class "")
+(defvar window_3_1_icon "")
+(defvar window_3_1_label "")
+(defvar window_3_1_visible true)
+(defvar window_3_1_nid "")
+(defwidget widget_window_3_1 []
+(revealer
+  :reveal {window_3_1_icon != "" || window_3_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_1_class} ${focused_window == window_3_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_1_nid} --flag hidden=off; bspc node -f ${window_3_1_nid}"
+      (box(image
+      :path window_3_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_1_label != ""}
+    )))
+  ))
+)
+(defvar window_3_2_focused false)
+(defvar window_3_2_class "")
+(defvar window_3_2_icon "")
+(defvar window_3_2_label "")
+(defvar window_3_2_visible true)
+(defvar window_3_2_nid "")
+(defwidget widget_window_3_2 []
+(revealer
+  :reveal {window_3_2_icon != "" || window_3_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_2_class} ${focused_window == window_3_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_2_nid} --flag hidden=off; bspc node -f ${window_3_2_nid}"
+      (box(image
+      :path window_3_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_2_label != ""}
+    )))
+  ))
+)
+(defvar window_3_3_focused false)
+(defvar window_3_3_class "")
+(defvar window_3_3_icon "")
+(defvar window_3_3_label "")
+(defvar window_3_3_visible true)
+(defvar window_3_3_nid "")
+(defwidget widget_window_3_3 []
+(revealer
+  :reveal {window_3_3_icon != "" || window_3_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_3_class} ${focused_window == window_3_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_3_nid} --flag hidden=off; bspc node -f ${window_3_3_nid}"
+      (box(image
+      :path window_3_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_3_label != ""}
+    )))
+  ))
+)
+(defvar window_3_4_focused false)
+(defvar window_3_4_class "")
+(defvar window_3_4_icon "")
+(defvar window_3_4_label "")
+(defvar window_3_4_visible true)
+(defvar window_3_4_nid "")
+(defwidget widget_window_3_4 []
+(revealer
+  :reveal {window_3_4_icon != "" || window_3_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_4_class} ${focused_window == window_3_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_4_nid} --flag hidden=off; bspc node -f ${window_3_4_nid}"
+      (box(image
+      :path window_3_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_4_label != ""}
+    )))
+  ))
+)
+(defvar window_3_5_focused false)
+(defvar window_3_5_class "")
+(defvar window_3_5_icon "")
+(defvar window_3_5_label "")
+(defvar window_3_5_visible true)
+(defvar window_3_5_nid "")
+(defwidget widget_window_3_5 []
+(revealer
+  :reveal {window_3_5_icon != "" || window_3_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_5_class} ${focused_window == window_3_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_5_nid} --flag hidden=off; bspc node -f ${window_3_5_nid}"
+      (box(image
+      :path window_3_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_5_label != ""}
+    )))
+  ))
+)
+(defvar window_3_6_focused false)
+(defvar window_3_6_class "")
+(defvar window_3_6_icon "")
+(defvar window_3_6_label "")
+(defvar window_3_6_visible true)
+(defvar window_3_6_nid "")
+(defwidget widget_window_3_6 []
+(revealer
+  :reveal {window_3_6_icon != "" || window_3_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_6_class} ${focused_window == window_3_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_6_nid} --flag hidden=off; bspc node -f ${window_3_6_nid}"
+      (box(image
+      :path window_3_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_6_label != ""}
+    )))
+  ))
+)
+(defvar window_3_7_focused false)
+(defvar window_3_7_class "")
+(defvar window_3_7_icon "")
+(defvar window_3_7_label "")
+(defvar window_3_7_visible true)
+(defvar window_3_7_nid "")
+(defwidget widget_window_3_7 []
+(revealer
+  :reveal {window_3_7_icon != "" || window_3_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_7_class} ${focused_window == window_3_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_7_nid} --flag hidden=off; bspc node -f ${window_3_7_nid}"
+      (box(image
+      :path window_3_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_7_label != ""}
+    )))
+  ))
+)
+(defvar window_3_8_focused false)
+(defvar window_3_8_class "")
+(defvar window_3_8_icon "")
+(defvar window_3_8_label "")
+(defvar window_3_8_visible true)
+(defvar window_3_8_nid "")
+(defwidget widget_window_3_8 []
+(revealer
+  :reveal {window_3_8_icon != "" || window_3_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_8_class} ${focused_window == window_3_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_8_nid} --flag hidden=off; bspc node -f ${window_3_8_nid}"
+      (box(image
+      :path window_3_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_8_label != ""}
+    )))
+  ))
+)
+(defvar window_3_9_focused false)
+(defvar window_3_9_class "")
+(defvar window_3_9_icon "")
+(defvar window_3_9_label "")
+(defvar window_3_9_visible true)
+(defvar window_3_9_nid "")
+(defwidget widget_window_3_9 []
+(revealer
+  :reveal {window_3_9_icon != "" || window_3_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_9_class} ${focused_window == window_3_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_9_nid} --flag hidden=off; bspc node -f ${window_3_9_nid}"
+      (box(image
+      :path window_3_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_9_label != ""}
+    )))
+  ))
+)
+(defvar window_3_10_focused false)
+(defvar window_3_10_class "")
+(defvar window_3_10_icon "")
+(defvar window_3_10_label "")
+(defvar window_3_10_visible true)
+(defvar window_3_10_nid "")
+(defwidget widget_window_3_10 []
+(revealer
+  :reveal {window_3_10_icon != "" || window_3_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_3_10_class} ${focused_window == window_3_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_3_10_nid} --flag hidden=off; bspc node -f ${window_3_10_nid}"
+      (box(image
+      :path window_3_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_3_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_3_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_3 []
+(revealer
+  :reveal {desktop_3_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_3_class} ${focused_desktop == desktop_3_did ? "focused" : "defocused"} ${desktop_3_icon != "" || desktop_3_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^3"
+      (box
+        (image
+          :path desktop_3_icon
+          :image-width {desktop_3_icon == "" ? 0 : 36}
+          :image-height {desktop_3_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_3_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_3_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_3_1)
+    (widget_window_3_2)
+    (widget_window_3_3)
+    (widget_window_3_4)
+    (widget_window_3_5)
+    (widget_window_3_6)
+    (widget_window_3_7)
+    (widget_window_3_8)
+    (widget_window_3_9)
+    (widget_window_3_10)
+  ))
+)
+(defvar desktop_4_focused false)
+(defvar desktop_4_class "")
+(defvar desktop_4_icon "")
+(defvar desktop_4_label "")
+(defvar desktop_4_did -2)
+(defvar desktop_4_ts 0)
+(defvar desktop_4_visible false)
+(defvar window_4_1_focused false)
+(defvar window_4_1_class "")
+(defvar window_4_1_icon "")
+(defvar window_4_1_label "")
+(defvar window_4_1_visible true)
+(defvar window_4_1_nid "")
+(defwidget widget_window_4_1 []
+(revealer
+  :reveal {window_4_1_icon != "" || window_4_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_1_class} ${focused_window == window_4_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_1_nid} --flag hidden=off; bspc node -f ${window_4_1_nid}"
+      (box(image
+      :path window_4_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_1_label != ""}
+    )))
+  ))
+)
+(defvar window_4_2_focused false)
+(defvar window_4_2_class "")
+(defvar window_4_2_icon "")
+(defvar window_4_2_label "")
+(defvar window_4_2_visible true)
+(defvar window_4_2_nid "")
+(defwidget widget_window_4_2 []
+(revealer
+  :reveal {window_4_2_icon != "" || window_4_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_2_class} ${focused_window == window_4_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_2_nid} --flag hidden=off; bspc node -f ${window_4_2_nid}"
+      (box(image
+      :path window_4_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_2_label != ""}
+    )))
+  ))
+)
+(defvar window_4_3_focused false)
+(defvar window_4_3_class "")
+(defvar window_4_3_icon "")
+(defvar window_4_3_label "")
+(defvar window_4_3_visible true)
+(defvar window_4_3_nid "")
+(defwidget widget_window_4_3 []
+(revealer
+  :reveal {window_4_3_icon != "" || window_4_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_3_class} ${focused_window == window_4_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_3_nid} --flag hidden=off; bspc node -f ${window_4_3_nid}"
+      (box(image
+      :path window_4_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_3_label != ""}
+    )))
+  ))
+)
+(defvar window_4_4_focused false)
+(defvar window_4_4_class "")
+(defvar window_4_4_icon "")
+(defvar window_4_4_label "")
+(defvar window_4_4_visible true)
+(defvar window_4_4_nid "")
+(defwidget widget_window_4_4 []
+(revealer
+  :reveal {window_4_4_icon != "" || window_4_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_4_class} ${focused_window == window_4_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_4_nid} --flag hidden=off; bspc node -f ${window_4_4_nid}"
+      (box(image
+      :path window_4_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_4_label != ""}
+    )))
+  ))
+)
+(defvar window_4_5_focused false)
+(defvar window_4_5_class "")
+(defvar window_4_5_icon "")
+(defvar window_4_5_label "")
+(defvar window_4_5_visible true)
+(defvar window_4_5_nid "")
+(defwidget widget_window_4_5 []
+(revealer
+  :reveal {window_4_5_icon != "" || window_4_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_5_class} ${focused_window == window_4_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_5_nid} --flag hidden=off; bspc node -f ${window_4_5_nid}"
+      (box(image
+      :path window_4_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_5_label != ""}
+    )))
+  ))
+)
+(defvar window_4_6_focused false)
+(defvar window_4_6_class "")
+(defvar window_4_6_icon "")
+(defvar window_4_6_label "")
+(defvar window_4_6_visible true)
+(defvar window_4_6_nid "")
+(defwidget widget_window_4_6 []
+(revealer
+  :reveal {window_4_6_icon != "" || window_4_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_6_class} ${focused_window == window_4_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_6_nid} --flag hidden=off; bspc node -f ${window_4_6_nid}"
+      (box(image
+      :path window_4_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_6_label != ""}
+    )))
+  ))
+)
+(defvar window_4_7_focused false)
+(defvar window_4_7_class "")
+(defvar window_4_7_icon "")
+(defvar window_4_7_label "")
+(defvar window_4_7_visible true)
+(defvar window_4_7_nid "")
+(defwidget widget_window_4_7 []
+(revealer
+  :reveal {window_4_7_icon != "" || window_4_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_7_class} ${focused_window == window_4_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_7_nid} --flag hidden=off; bspc node -f ${window_4_7_nid}"
+      (box(image
+      :path window_4_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_7_label != ""}
+    )))
+  ))
+)
+(defvar window_4_8_focused false)
+(defvar window_4_8_class "")
+(defvar window_4_8_icon "")
+(defvar window_4_8_label "")
+(defvar window_4_8_visible true)
+(defvar window_4_8_nid "")
+(defwidget widget_window_4_8 []
+(revealer
+  :reveal {window_4_8_icon != "" || window_4_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_8_class} ${focused_window == window_4_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_8_nid} --flag hidden=off; bspc node -f ${window_4_8_nid}"
+      (box(image
+      :path window_4_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_8_label != ""}
+    )))
+  ))
+)
+(defvar window_4_9_focused false)
+(defvar window_4_9_class "")
+(defvar window_4_9_icon "")
+(defvar window_4_9_label "")
+(defvar window_4_9_visible true)
+(defvar window_4_9_nid "")
+(defwidget widget_window_4_9 []
+(revealer
+  :reveal {window_4_9_icon != "" || window_4_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_9_class} ${focused_window == window_4_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_9_nid} --flag hidden=off; bspc node -f ${window_4_9_nid}"
+      (box(image
+      :path window_4_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_9_label != ""}
+    )))
+  ))
+)
+(defvar window_4_10_focused false)
+(defvar window_4_10_class "")
+(defvar window_4_10_icon "")
+(defvar window_4_10_label "")
+(defvar window_4_10_visible true)
+(defvar window_4_10_nid "")
+(defwidget widget_window_4_10 []
+(revealer
+  :reveal {window_4_10_icon != "" || window_4_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_4_10_class} ${focused_window == window_4_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_4_10_nid} --flag hidden=off; bspc node -f ${window_4_10_nid}"
+      (box(image
+      :path window_4_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_4_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_4_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_4 []
+(revealer
+  :reveal {desktop_4_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_4_class} ${focused_desktop == desktop_4_did ? "focused" : "defocused"} ${desktop_4_icon != "" || desktop_4_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^4"
+      (box
+        (image
+          :path desktop_4_icon
+          :image-width {desktop_4_icon == "" ? 0 : 36}
+          :image-height {desktop_4_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_4_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_4_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_4_1)
+    (widget_window_4_2)
+    (widget_window_4_3)
+    (widget_window_4_4)
+    (widget_window_4_5)
+    (widget_window_4_6)
+    (widget_window_4_7)
+    (widget_window_4_8)
+    (widget_window_4_9)
+    (widget_window_4_10)
+  ))
+)
+(defvar desktop_5_focused false)
+(defvar desktop_5_class "")
+(defvar desktop_5_icon "")
+(defvar desktop_5_label "")
+(defvar desktop_5_did -2)
+(defvar desktop_5_ts 0)
+(defvar desktop_5_visible false)
+(defvar window_5_1_focused false)
+(defvar window_5_1_class "")
+(defvar window_5_1_icon "")
+(defvar window_5_1_label "")
+(defvar window_5_1_visible true)
+(defvar window_5_1_nid "")
+(defwidget widget_window_5_1 []
+(revealer
+  :reveal {window_5_1_icon != "" || window_5_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_1_class} ${focused_window == window_5_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_1_nid} --flag hidden=off; bspc node -f ${window_5_1_nid}"
+      (box(image
+      :path window_5_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_1_label != ""}
+    )))
+  ))
+)
+(defvar window_5_2_focused false)
+(defvar window_5_2_class "")
+(defvar window_5_2_icon "")
+(defvar window_5_2_label "")
+(defvar window_5_2_visible true)
+(defvar window_5_2_nid "")
+(defwidget widget_window_5_2 []
+(revealer
+  :reveal {window_5_2_icon != "" || window_5_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_2_class} ${focused_window == window_5_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_2_nid} --flag hidden=off; bspc node -f ${window_5_2_nid}"
+      (box(image
+      :path window_5_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_2_label != ""}
+    )))
+  ))
+)
+(defvar window_5_3_focused false)
+(defvar window_5_3_class "")
+(defvar window_5_3_icon "")
+(defvar window_5_3_label "")
+(defvar window_5_3_visible true)
+(defvar window_5_3_nid "")
+(defwidget widget_window_5_3 []
+(revealer
+  :reveal {window_5_3_icon != "" || window_5_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_3_class} ${focused_window == window_5_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_3_nid} --flag hidden=off; bspc node -f ${window_5_3_nid}"
+      (box(image
+      :path window_5_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_3_label != ""}
+    )))
+  ))
+)
+(defvar window_5_4_focused false)
+(defvar window_5_4_class "")
+(defvar window_5_4_icon "")
+(defvar window_5_4_label "")
+(defvar window_5_4_visible true)
+(defvar window_5_4_nid "")
+(defwidget widget_window_5_4 []
+(revealer
+  :reveal {window_5_4_icon != "" || window_5_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_4_class} ${focused_window == window_5_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_4_nid} --flag hidden=off; bspc node -f ${window_5_4_nid}"
+      (box(image
+      :path window_5_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_4_label != ""}
+    )))
+  ))
+)
+(defvar window_5_5_focused false)
+(defvar window_5_5_class "")
+(defvar window_5_5_icon "")
+(defvar window_5_5_label "")
+(defvar window_5_5_visible true)
+(defvar window_5_5_nid "")
+(defwidget widget_window_5_5 []
+(revealer
+  :reveal {window_5_5_icon != "" || window_5_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_5_class} ${focused_window == window_5_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_5_nid} --flag hidden=off; bspc node -f ${window_5_5_nid}"
+      (box(image
+      :path window_5_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_5_label != ""}
+    )))
+  ))
+)
+(defvar window_5_6_focused false)
+(defvar window_5_6_class "")
+(defvar window_5_6_icon "")
+(defvar window_5_6_label "")
+(defvar window_5_6_visible true)
+(defvar window_5_6_nid "")
+(defwidget widget_window_5_6 []
+(revealer
+  :reveal {window_5_6_icon != "" || window_5_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_6_class} ${focused_window == window_5_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_6_nid} --flag hidden=off; bspc node -f ${window_5_6_nid}"
+      (box(image
+      :path window_5_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_6_label != ""}
+    )))
+  ))
+)
+(defvar window_5_7_focused false)
+(defvar window_5_7_class "")
+(defvar window_5_7_icon "")
+(defvar window_5_7_label "")
+(defvar window_5_7_visible true)
+(defvar window_5_7_nid "")
+(defwidget widget_window_5_7 []
+(revealer
+  :reveal {window_5_7_icon != "" || window_5_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_7_class} ${focused_window == window_5_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_7_nid} --flag hidden=off; bspc node -f ${window_5_7_nid}"
+      (box(image
+      :path window_5_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_7_label != ""}
+    )))
+  ))
+)
+(defvar window_5_8_focused false)
+(defvar window_5_8_class "")
+(defvar window_5_8_icon "")
+(defvar window_5_8_label "")
+(defvar window_5_8_visible true)
+(defvar window_5_8_nid "")
+(defwidget widget_window_5_8 []
+(revealer
+  :reveal {window_5_8_icon != "" || window_5_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_8_class} ${focused_window == window_5_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_8_nid} --flag hidden=off; bspc node -f ${window_5_8_nid}"
+      (box(image
+      :path window_5_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_8_label != ""}
+    )))
+  ))
+)
+(defvar window_5_9_focused false)
+(defvar window_5_9_class "")
+(defvar window_5_9_icon "")
+(defvar window_5_9_label "")
+(defvar window_5_9_visible true)
+(defvar window_5_9_nid "")
+(defwidget widget_window_5_9 []
+(revealer
+  :reveal {window_5_9_icon != "" || window_5_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_9_class} ${focused_window == window_5_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_9_nid} --flag hidden=off; bspc node -f ${window_5_9_nid}"
+      (box(image
+      :path window_5_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_9_label != ""}
+    )))
+  ))
+)
+(defvar window_5_10_focused false)
+(defvar window_5_10_class "")
+(defvar window_5_10_icon "")
+(defvar window_5_10_label "")
+(defvar window_5_10_visible true)
+(defvar window_5_10_nid "")
+(defwidget widget_window_5_10 []
+(revealer
+  :reveal {window_5_10_icon != "" || window_5_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_5_10_class} ${focused_window == window_5_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_5_10_nid} --flag hidden=off; bspc node -f ${window_5_10_nid}"
+      (box(image
+      :path window_5_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_5_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_5_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_5 []
+(revealer
+  :reveal {desktop_5_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_5_class} ${focused_desktop == desktop_5_did ? "focused" : "defocused"} ${desktop_5_icon != "" || desktop_5_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^5"
+      (box
+        (image
+          :path desktop_5_icon
+          :image-width {desktop_5_icon == "" ? 0 : 36}
+          :image-height {desktop_5_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_5_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_5_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_5_1)
+    (widget_window_5_2)
+    (widget_window_5_3)
+    (widget_window_5_4)
+    (widget_window_5_5)
+    (widget_window_5_6)
+    (widget_window_5_7)
+    (widget_window_5_8)
+    (widget_window_5_9)
+    (widget_window_5_10)
+  ))
+)
+(defvar desktop_6_focused false)
+(defvar desktop_6_class "")
+(defvar desktop_6_icon "")
+(defvar desktop_6_label "")
+(defvar desktop_6_did -2)
+(defvar desktop_6_ts 0)
+(defvar desktop_6_visible false)
+(defvar window_6_1_focused false)
+(defvar window_6_1_class "")
+(defvar window_6_1_icon "")
+(defvar window_6_1_label "")
+(defvar window_6_1_visible true)
+(defvar window_6_1_nid "")
+(defwidget widget_window_6_1 []
+(revealer
+  :reveal {window_6_1_icon != "" || window_6_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_1_class} ${focused_window == window_6_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_1_nid} --flag hidden=off; bspc node -f ${window_6_1_nid}"
+      (box(image
+      :path window_6_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_1_label != ""}
+    )))
+  ))
+)
+(defvar window_6_2_focused false)
+(defvar window_6_2_class "")
+(defvar window_6_2_icon "")
+(defvar window_6_2_label "")
+(defvar window_6_2_visible true)
+(defvar window_6_2_nid "")
+(defwidget widget_window_6_2 []
+(revealer
+  :reveal {window_6_2_icon != "" || window_6_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_2_class} ${focused_window == window_6_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_2_nid} --flag hidden=off; bspc node -f ${window_6_2_nid}"
+      (box(image
+      :path window_6_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_2_label != ""}
+    )))
+  ))
+)
+(defvar window_6_3_focused false)
+(defvar window_6_3_class "")
+(defvar window_6_3_icon "")
+(defvar window_6_3_label "")
+(defvar window_6_3_visible true)
+(defvar window_6_3_nid "")
+(defwidget widget_window_6_3 []
+(revealer
+  :reveal {window_6_3_icon != "" || window_6_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_3_class} ${focused_window == window_6_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_3_nid} --flag hidden=off; bspc node -f ${window_6_3_nid}"
+      (box(image
+      :path window_6_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_3_label != ""}
+    )))
+  ))
+)
+(defvar window_6_4_focused false)
+(defvar window_6_4_class "")
+(defvar window_6_4_icon "")
+(defvar window_6_4_label "")
+(defvar window_6_4_visible true)
+(defvar window_6_4_nid "")
+(defwidget widget_window_6_4 []
+(revealer
+  :reveal {window_6_4_icon != "" || window_6_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_4_class} ${focused_window == window_6_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_4_nid} --flag hidden=off; bspc node -f ${window_6_4_nid}"
+      (box(image
+      :path window_6_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_4_label != ""}
+    )))
+  ))
+)
+(defvar window_6_5_focused false)
+(defvar window_6_5_class "")
+(defvar window_6_5_icon "")
+(defvar window_6_5_label "")
+(defvar window_6_5_visible true)
+(defvar window_6_5_nid "")
+(defwidget widget_window_6_5 []
+(revealer
+  :reveal {window_6_5_icon != "" || window_6_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_5_class} ${focused_window == window_6_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_5_nid} --flag hidden=off; bspc node -f ${window_6_5_nid}"
+      (box(image
+      :path window_6_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_5_label != ""}
+    )))
+  ))
+)
+(defvar window_6_6_focused false)
+(defvar window_6_6_class "")
+(defvar window_6_6_icon "")
+(defvar window_6_6_label "")
+(defvar window_6_6_visible true)
+(defvar window_6_6_nid "")
+(defwidget widget_window_6_6 []
+(revealer
+  :reveal {window_6_6_icon != "" || window_6_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_6_class} ${focused_window == window_6_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_6_nid} --flag hidden=off; bspc node -f ${window_6_6_nid}"
+      (box(image
+      :path window_6_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_6_label != ""}
+    )))
+  ))
+)
+(defvar window_6_7_focused false)
+(defvar window_6_7_class "")
+(defvar window_6_7_icon "")
+(defvar window_6_7_label "")
+(defvar window_6_7_visible true)
+(defvar window_6_7_nid "")
+(defwidget widget_window_6_7 []
+(revealer
+  :reveal {window_6_7_icon != "" || window_6_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_7_class} ${focused_window == window_6_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_7_nid} --flag hidden=off; bspc node -f ${window_6_7_nid}"
+      (box(image
+      :path window_6_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_7_label != ""}
+    )))
+  ))
+)
+(defvar window_6_8_focused false)
+(defvar window_6_8_class "")
+(defvar window_6_8_icon "")
+(defvar window_6_8_label "")
+(defvar window_6_8_visible true)
+(defvar window_6_8_nid "")
+(defwidget widget_window_6_8 []
+(revealer
+  :reveal {window_6_8_icon != "" || window_6_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_8_class} ${focused_window == window_6_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_8_nid} --flag hidden=off; bspc node -f ${window_6_8_nid}"
+      (box(image
+      :path window_6_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_8_label != ""}
+    )))
+  ))
+)
+(defvar window_6_9_focused false)
+(defvar window_6_9_class "")
+(defvar window_6_9_icon "")
+(defvar window_6_9_label "")
+(defvar window_6_9_visible true)
+(defvar window_6_9_nid "")
+(defwidget widget_window_6_9 []
+(revealer
+  :reveal {window_6_9_icon != "" || window_6_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_9_class} ${focused_window == window_6_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_9_nid} --flag hidden=off; bspc node -f ${window_6_9_nid}"
+      (box(image
+      :path window_6_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_9_label != ""}
+    )))
+  ))
+)
+(defvar window_6_10_focused false)
+(defvar window_6_10_class "")
+(defvar window_6_10_icon "")
+(defvar window_6_10_label "")
+(defvar window_6_10_visible true)
+(defvar window_6_10_nid "")
+(defwidget widget_window_6_10 []
+(revealer
+  :reveal {window_6_10_icon != "" || window_6_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_6_10_class} ${focused_window == window_6_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_6_10_nid} --flag hidden=off; bspc node -f ${window_6_10_nid}"
+      (box(image
+      :path window_6_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_6_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_6_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_6 []
+(revealer
+  :reveal {desktop_6_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_6_class} ${focused_desktop == desktop_6_did ? "focused" : "defocused"} ${desktop_6_icon != "" || desktop_6_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^6"
+      (box
+        (image
+          :path desktop_6_icon
+          :image-width {desktop_6_icon == "" ? 0 : 36}
+          :image-height {desktop_6_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_6_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_6_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_6_1)
+    (widget_window_6_2)
+    (widget_window_6_3)
+    (widget_window_6_4)
+    (widget_window_6_5)
+    (widget_window_6_6)
+    (widget_window_6_7)
+    (widget_window_6_8)
+    (widget_window_6_9)
+    (widget_window_6_10)
+  ))
+)
+(defvar desktop_7_focused false)
+(defvar desktop_7_class "")
+(defvar desktop_7_icon "")
+(defvar desktop_7_label "")
+(defvar desktop_7_did -2)
+(defvar desktop_7_ts 0)
+(defvar desktop_7_visible false)
+(defvar window_7_1_focused false)
+(defvar window_7_1_class "")
+(defvar window_7_1_icon "")
+(defvar window_7_1_label "")
+(defvar window_7_1_visible true)
+(defvar window_7_1_nid "")
+(defwidget widget_window_7_1 []
+(revealer
+  :reveal {window_7_1_icon != "" || window_7_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_1_class} ${focused_window == window_7_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_1_nid} --flag hidden=off; bspc node -f ${window_7_1_nid}"
+      (box(image
+      :path window_7_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_1_label != ""}
+    )))
+  ))
+)
+(defvar window_7_2_focused false)
+(defvar window_7_2_class "")
+(defvar window_7_2_icon "")
+(defvar window_7_2_label "")
+(defvar window_7_2_visible true)
+(defvar window_7_2_nid "")
+(defwidget widget_window_7_2 []
+(revealer
+  :reveal {window_7_2_icon != "" || window_7_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_2_class} ${focused_window == window_7_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_2_nid} --flag hidden=off; bspc node -f ${window_7_2_nid}"
+      (box(image
+      :path window_7_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_2_label != ""}
+    )))
+  ))
+)
+(defvar window_7_3_focused false)
+(defvar window_7_3_class "")
+(defvar window_7_3_icon "")
+(defvar window_7_3_label "")
+(defvar window_7_3_visible true)
+(defvar window_7_3_nid "")
+(defwidget widget_window_7_3 []
+(revealer
+  :reveal {window_7_3_icon != "" || window_7_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_3_class} ${focused_window == window_7_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_3_nid} --flag hidden=off; bspc node -f ${window_7_3_nid}"
+      (box(image
+      :path window_7_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_3_label != ""}
+    )))
+  ))
+)
+(defvar window_7_4_focused false)
+(defvar window_7_4_class "")
+(defvar window_7_4_icon "")
+(defvar window_7_4_label "")
+(defvar window_7_4_visible true)
+(defvar window_7_4_nid "")
+(defwidget widget_window_7_4 []
+(revealer
+  :reveal {window_7_4_icon != "" || window_7_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_4_class} ${focused_window == window_7_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_4_nid} --flag hidden=off; bspc node -f ${window_7_4_nid}"
+      (box(image
+      :path window_7_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_4_label != ""}
+    )))
+  ))
+)
+(defvar window_7_5_focused false)
+(defvar window_7_5_class "")
+(defvar window_7_5_icon "")
+(defvar window_7_5_label "")
+(defvar window_7_5_visible true)
+(defvar window_7_5_nid "")
+(defwidget widget_window_7_5 []
+(revealer
+  :reveal {window_7_5_icon != "" || window_7_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_5_class} ${focused_window == window_7_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_5_nid} --flag hidden=off; bspc node -f ${window_7_5_nid}"
+      (box(image
+      :path window_7_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_5_label != ""}
+    )))
+  ))
+)
+(defvar window_7_6_focused false)
+(defvar window_7_6_class "")
+(defvar window_7_6_icon "")
+(defvar window_7_6_label "")
+(defvar window_7_6_visible true)
+(defvar window_7_6_nid "")
+(defwidget widget_window_7_6 []
+(revealer
+  :reveal {window_7_6_icon != "" || window_7_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_6_class} ${focused_window == window_7_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_6_nid} --flag hidden=off; bspc node -f ${window_7_6_nid}"
+      (box(image
+      :path window_7_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_6_label != ""}
+    )))
+  ))
+)
+(defvar window_7_7_focused false)
+(defvar window_7_7_class "")
+(defvar window_7_7_icon "")
+(defvar window_7_7_label "")
+(defvar window_7_7_visible true)
+(defvar window_7_7_nid "")
+(defwidget widget_window_7_7 []
+(revealer
+  :reveal {window_7_7_icon != "" || window_7_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_7_class} ${focused_window == window_7_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_7_nid} --flag hidden=off; bspc node -f ${window_7_7_nid}"
+      (box(image
+      :path window_7_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_7_label != ""}
+    )))
+  ))
+)
+(defvar window_7_8_focused false)
+(defvar window_7_8_class "")
+(defvar window_7_8_icon "")
+(defvar window_7_8_label "")
+(defvar window_7_8_visible true)
+(defvar window_7_8_nid "")
+(defwidget widget_window_7_8 []
+(revealer
+  :reveal {window_7_8_icon != "" || window_7_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_8_class} ${focused_window == window_7_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_8_nid} --flag hidden=off; bspc node -f ${window_7_8_nid}"
+      (box(image
+      :path window_7_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_8_label != ""}
+    )))
+  ))
+)
+(defvar window_7_9_focused false)
+(defvar window_7_9_class "")
+(defvar window_7_9_icon "")
+(defvar window_7_9_label "")
+(defvar window_7_9_visible true)
+(defvar window_7_9_nid "")
+(defwidget widget_window_7_9 []
+(revealer
+  :reveal {window_7_9_icon != "" || window_7_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_9_class} ${focused_window == window_7_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_9_nid} --flag hidden=off; bspc node -f ${window_7_9_nid}"
+      (box(image
+      :path window_7_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_9_label != ""}
+    )))
+  ))
+)
+(defvar window_7_10_focused false)
+(defvar window_7_10_class "")
+(defvar window_7_10_icon "")
+(defvar window_7_10_label "")
+(defvar window_7_10_visible true)
+(defvar window_7_10_nid "")
+(defwidget widget_window_7_10 []
+(revealer
+  :reveal {window_7_10_icon != "" || window_7_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_7_10_class} ${focused_window == window_7_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_7_10_nid} --flag hidden=off; bspc node -f ${window_7_10_nid}"
+      (box(image
+      :path window_7_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_7_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_7_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_7 []
+(revealer
+  :reveal {desktop_7_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_7_class} ${focused_desktop == desktop_7_did ? "focused" : "defocused"} ${desktop_7_icon != "" || desktop_7_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^7"
+      (box
+        (image
+          :path desktop_7_icon
+          :image-width {desktop_7_icon == "" ? 0 : 36}
+          :image-height {desktop_7_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_7_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_7_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_7_1)
+    (widget_window_7_2)
+    (widget_window_7_3)
+    (widget_window_7_4)
+    (widget_window_7_5)
+    (widget_window_7_6)
+    (widget_window_7_7)
+    (widget_window_7_8)
+    (widget_window_7_9)
+    (widget_window_7_10)
+  ))
+)
+(defvar desktop_8_focused false)
+(defvar desktop_8_class "")
+(defvar desktop_8_icon "")
+(defvar desktop_8_label "")
+(defvar desktop_8_did -2)
+(defvar desktop_8_ts 0)
+(defvar desktop_8_visible false)
+(defvar window_8_1_focused false)
+(defvar window_8_1_class "")
+(defvar window_8_1_icon "")
+(defvar window_8_1_label "")
+(defvar window_8_1_visible true)
+(defvar window_8_1_nid "")
+(defwidget widget_window_8_1 []
+(revealer
+  :reveal {window_8_1_icon != "" || window_8_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_1_class} ${focused_window == window_8_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_1_nid} --flag hidden=off; bspc node -f ${window_8_1_nid}"
+      (box(image
+      :path window_8_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_1_label != ""}
+    )))
+  ))
+)
+(defvar window_8_2_focused false)
+(defvar window_8_2_class "")
+(defvar window_8_2_icon "")
+(defvar window_8_2_label "")
+(defvar window_8_2_visible true)
+(defvar window_8_2_nid "")
+(defwidget widget_window_8_2 []
+(revealer
+  :reveal {window_8_2_icon != "" || window_8_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_2_class} ${focused_window == window_8_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_2_nid} --flag hidden=off; bspc node -f ${window_8_2_nid}"
+      (box(image
+      :path window_8_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_2_label != ""}
+    )))
+  ))
+)
+(defvar window_8_3_focused false)
+(defvar window_8_3_class "")
+(defvar window_8_3_icon "")
+(defvar window_8_3_label "")
+(defvar window_8_3_visible true)
+(defvar window_8_3_nid "")
+(defwidget widget_window_8_3 []
+(revealer
+  :reveal {window_8_3_icon != "" || window_8_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_3_class} ${focused_window == window_8_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_3_nid} --flag hidden=off; bspc node -f ${window_8_3_nid}"
+      (box(image
+      :path window_8_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_3_label != ""}
+    )))
+  ))
+)
+(defvar window_8_4_focused false)
+(defvar window_8_4_class "")
+(defvar window_8_4_icon "")
+(defvar window_8_4_label "")
+(defvar window_8_4_visible true)
+(defvar window_8_4_nid "")
+(defwidget widget_window_8_4 []
+(revealer
+  :reveal {window_8_4_icon != "" || window_8_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_4_class} ${focused_window == window_8_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_4_nid} --flag hidden=off; bspc node -f ${window_8_4_nid}"
+      (box(image
+      :path window_8_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_4_label != ""}
+    )))
+  ))
+)
+(defvar window_8_5_focused false)
+(defvar window_8_5_class "")
+(defvar window_8_5_icon "")
+(defvar window_8_5_label "")
+(defvar window_8_5_visible true)
+(defvar window_8_5_nid "")
+(defwidget widget_window_8_5 []
+(revealer
+  :reveal {window_8_5_icon != "" || window_8_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_5_class} ${focused_window == window_8_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_5_nid} --flag hidden=off; bspc node -f ${window_8_5_nid}"
+      (box(image
+      :path window_8_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_5_label != ""}
+    )))
+  ))
+)
+(defvar window_8_6_focused false)
+(defvar window_8_6_class "")
+(defvar window_8_6_icon "")
+(defvar window_8_6_label "")
+(defvar window_8_6_visible true)
+(defvar window_8_6_nid "")
+(defwidget widget_window_8_6 []
+(revealer
+  :reveal {window_8_6_icon != "" || window_8_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_6_class} ${focused_window == window_8_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_6_nid} --flag hidden=off; bspc node -f ${window_8_6_nid}"
+      (box(image
+      :path window_8_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_6_label != ""}
+    )))
+  ))
+)
+(defvar window_8_7_focused false)
+(defvar window_8_7_class "")
+(defvar window_8_7_icon "")
+(defvar window_8_7_label "")
+(defvar window_8_7_visible true)
+(defvar window_8_7_nid "")
+(defwidget widget_window_8_7 []
+(revealer
+  :reveal {window_8_7_icon != "" || window_8_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_7_class} ${focused_window == window_8_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_7_nid} --flag hidden=off; bspc node -f ${window_8_7_nid}"
+      (box(image
+      :path window_8_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_7_label != ""}
+    )))
+  ))
+)
+(defvar window_8_8_focused false)
+(defvar window_8_8_class "")
+(defvar window_8_8_icon "")
+(defvar window_8_8_label "")
+(defvar window_8_8_visible true)
+(defvar window_8_8_nid "")
+(defwidget widget_window_8_8 []
+(revealer
+  :reveal {window_8_8_icon != "" || window_8_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_8_class} ${focused_window == window_8_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_8_nid} --flag hidden=off; bspc node -f ${window_8_8_nid}"
+      (box(image
+      :path window_8_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_8_label != ""}
+    )))
+  ))
+)
+(defvar window_8_9_focused false)
+(defvar window_8_9_class "")
+(defvar window_8_9_icon "")
+(defvar window_8_9_label "")
+(defvar window_8_9_visible true)
+(defvar window_8_9_nid "")
+(defwidget widget_window_8_9 []
+(revealer
+  :reveal {window_8_9_icon != "" || window_8_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_9_class} ${focused_window == window_8_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_9_nid} --flag hidden=off; bspc node -f ${window_8_9_nid}"
+      (box(image
+      :path window_8_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_9_label != ""}
+    )))
+  ))
+)
+(defvar window_8_10_focused false)
+(defvar window_8_10_class "")
+(defvar window_8_10_icon "")
+(defvar window_8_10_label "")
+(defvar window_8_10_visible true)
+(defvar window_8_10_nid "")
+(defwidget widget_window_8_10 []
+(revealer
+  :reveal {window_8_10_icon != "" || window_8_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_8_10_class} ${focused_window == window_8_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_8_10_nid} --flag hidden=off; bspc node -f ${window_8_10_nid}"
+      (box(image
+      :path window_8_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_8_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_8_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_8 []
+(revealer
+  :reveal {desktop_8_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_8_class} ${focused_desktop == desktop_8_did ? "focused" : "defocused"} ${desktop_8_icon != "" || desktop_8_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^8"
+      (box
+        (image
+          :path desktop_8_icon
+          :image-width {desktop_8_icon == "" ? 0 : 36}
+          :image-height {desktop_8_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_8_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_8_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_8_1)
+    (widget_window_8_2)
+    (widget_window_8_3)
+    (widget_window_8_4)
+    (widget_window_8_5)
+    (widget_window_8_6)
+    (widget_window_8_7)
+    (widget_window_8_8)
+    (widget_window_8_9)
+    (widget_window_8_10)
+  ))
+)
+(defvar desktop_9_focused false)
+(defvar desktop_9_class "")
+(defvar desktop_9_icon "")
+(defvar desktop_9_label "")
+(defvar desktop_9_did -2)
+(defvar desktop_9_ts 0)
+(defvar desktop_9_visible false)
+(defvar window_9_1_focused false)
+(defvar window_9_1_class "")
+(defvar window_9_1_icon "")
+(defvar window_9_1_label "")
+(defvar window_9_1_visible true)
+(defvar window_9_1_nid "")
+(defwidget widget_window_9_1 []
+(revealer
+  :reveal {window_9_1_icon != "" || window_9_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_1_class} ${focused_window == window_9_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_1_nid} --flag hidden=off; bspc node -f ${window_9_1_nid}"
+      (box(image
+      :path window_9_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_1_label != ""}
+    )))
+  ))
+)
+(defvar window_9_2_focused false)
+(defvar window_9_2_class "")
+(defvar window_9_2_icon "")
+(defvar window_9_2_label "")
+(defvar window_9_2_visible true)
+(defvar window_9_2_nid "")
+(defwidget widget_window_9_2 []
+(revealer
+  :reveal {window_9_2_icon != "" || window_9_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_2_class} ${focused_window == window_9_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_2_nid} --flag hidden=off; bspc node -f ${window_9_2_nid}"
+      (box(image
+      :path window_9_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_2_label != ""}
+    )))
+  ))
+)
+(defvar window_9_3_focused false)
+(defvar window_9_3_class "")
+(defvar window_9_3_icon "")
+(defvar window_9_3_label "")
+(defvar window_9_3_visible true)
+(defvar window_9_3_nid "")
+(defwidget widget_window_9_3 []
+(revealer
+  :reveal {window_9_3_icon != "" || window_9_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_3_class} ${focused_window == window_9_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_3_nid} --flag hidden=off; bspc node -f ${window_9_3_nid}"
+      (box(image
+      :path window_9_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_3_label != ""}
+    )))
+  ))
+)
+(defvar window_9_4_focused false)
+(defvar window_9_4_class "")
+(defvar window_9_4_icon "")
+(defvar window_9_4_label "")
+(defvar window_9_4_visible true)
+(defvar window_9_4_nid "")
+(defwidget widget_window_9_4 []
+(revealer
+  :reveal {window_9_4_icon != "" || window_9_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_4_class} ${focused_window == window_9_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_4_nid} --flag hidden=off; bspc node -f ${window_9_4_nid}"
+      (box(image
+      :path window_9_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_4_label != ""}
+    )))
+  ))
+)
+(defvar window_9_5_focused false)
+(defvar window_9_5_class "")
+(defvar window_9_5_icon "")
+(defvar window_9_5_label "")
+(defvar window_9_5_visible true)
+(defvar window_9_5_nid "")
+(defwidget widget_window_9_5 []
+(revealer
+  :reveal {window_9_5_icon != "" || window_9_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_5_class} ${focused_window == window_9_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_5_nid} --flag hidden=off; bspc node -f ${window_9_5_nid}"
+      (box(image
+      :path window_9_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_5_label != ""}
+    )))
+  ))
+)
+(defvar window_9_6_focused false)
+(defvar window_9_6_class "")
+(defvar window_9_6_icon "")
+(defvar window_9_6_label "")
+(defvar window_9_6_visible true)
+(defvar window_9_6_nid "")
+(defwidget widget_window_9_6 []
+(revealer
+  :reveal {window_9_6_icon != "" || window_9_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_6_class} ${focused_window == window_9_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_6_nid} --flag hidden=off; bspc node -f ${window_9_6_nid}"
+      (box(image
+      :path window_9_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_6_label != ""}
+    )))
+  ))
+)
+(defvar window_9_7_focused false)
+(defvar window_9_7_class "")
+(defvar window_9_7_icon "")
+(defvar window_9_7_label "")
+(defvar window_9_7_visible true)
+(defvar window_9_7_nid "")
+(defwidget widget_window_9_7 []
+(revealer
+  :reveal {window_9_7_icon != "" || window_9_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_7_class} ${focused_window == window_9_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_7_nid} --flag hidden=off; bspc node -f ${window_9_7_nid}"
+      (box(image
+      :path window_9_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_7_label != ""}
+    )))
+  ))
+)
+(defvar window_9_8_focused false)
+(defvar window_9_8_class "")
+(defvar window_9_8_icon "")
+(defvar window_9_8_label "")
+(defvar window_9_8_visible true)
+(defvar window_9_8_nid "")
+(defwidget widget_window_9_8 []
+(revealer
+  :reveal {window_9_8_icon != "" || window_9_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_8_class} ${focused_window == window_9_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_8_nid} --flag hidden=off; bspc node -f ${window_9_8_nid}"
+      (box(image
+      :path window_9_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_8_label != ""}
+    )))
+  ))
+)
+(defvar window_9_9_focused false)
+(defvar window_9_9_class "")
+(defvar window_9_9_icon "")
+(defvar window_9_9_label "")
+(defvar window_9_9_visible true)
+(defvar window_9_9_nid "")
+(defwidget widget_window_9_9 []
+(revealer
+  :reveal {window_9_9_icon != "" || window_9_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_9_class} ${focused_window == window_9_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_9_nid} --flag hidden=off; bspc node -f ${window_9_9_nid}"
+      (box(image
+      :path window_9_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_9_label != ""}
+    )))
+  ))
+)
+(defvar window_9_10_focused false)
+(defvar window_9_10_class "")
+(defvar window_9_10_icon "")
+(defvar window_9_10_label "")
+(defvar window_9_10_visible true)
+(defvar window_9_10_nid "")
+(defwidget widget_window_9_10 []
+(revealer
+  :reveal {window_9_10_icon != "" || window_9_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_9_10_class} ${focused_window == window_9_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_9_10_nid} --flag hidden=off; bspc node -f ${window_9_10_nid}"
+      (box(image
+      :path window_9_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_9_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_9_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_9 []
+(revealer
+  :reveal {desktop_9_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_9_class} ${focused_desktop == desktop_9_did ? "focused" : "defocused"} ${desktop_9_icon != "" || desktop_9_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^9"
+      (box
+        (image
+          :path desktop_9_icon
+          :image-width {desktop_9_icon == "" ? 0 : 36}
+          :image-height {desktop_9_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_9_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_9_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_9_1)
+    (widget_window_9_2)
+    (widget_window_9_3)
+    (widget_window_9_4)
+    (widget_window_9_5)
+    (widget_window_9_6)
+    (widget_window_9_7)
+    (widget_window_9_8)
+    (widget_window_9_9)
+    (widget_window_9_10)
+  ))
+)
+(defvar desktop_10_focused false)
+(defvar desktop_10_class "")
+(defvar desktop_10_icon "")
+(defvar desktop_10_label "")
+(defvar desktop_10_did -2)
+(defvar desktop_10_ts 0)
+(defvar desktop_10_visible false)
+(defvar window_10_1_focused false)
+(defvar window_10_1_class "")
+(defvar window_10_1_icon "")
+(defvar window_10_1_label "")
+(defvar window_10_1_visible true)
+(defvar window_10_1_nid "")
+(defwidget widget_window_10_1 []
+(revealer
+  :reveal {window_10_1_icon != "" || window_10_1_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_1_class} ${focused_window == window_10_1_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_1_nid} --flag hidden=off; bspc node -f ${window_10_1_nid}"
+      (box(image
+      :path window_10_1_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_1_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_1_label != ""}
+    )))
+  ))
+)
+(defvar window_10_2_focused false)
+(defvar window_10_2_class "")
+(defvar window_10_2_icon "")
+(defvar window_10_2_label "")
+(defvar window_10_2_visible true)
+(defvar window_10_2_nid "")
+(defwidget widget_window_10_2 []
+(revealer
+  :reveal {window_10_2_icon != "" || window_10_2_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_2_class} ${focused_window == window_10_2_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_2_nid} --flag hidden=off; bspc node -f ${window_10_2_nid}"
+      (box(image
+      :path window_10_2_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_2_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_2_label != ""}
+    )))
+  ))
+)
+(defvar window_10_3_focused false)
+(defvar window_10_3_class "")
+(defvar window_10_3_icon "")
+(defvar window_10_3_label "")
+(defvar window_10_3_visible true)
+(defvar window_10_3_nid "")
+(defwidget widget_window_10_3 []
+(revealer
+  :reveal {window_10_3_icon != "" || window_10_3_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_3_class} ${focused_window == window_10_3_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_3_nid} --flag hidden=off; bspc node -f ${window_10_3_nid}"
+      (box(image
+      :path window_10_3_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_3_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_3_label != ""}
+    )))
+  ))
+)
+(defvar window_10_4_focused false)
+(defvar window_10_4_class "")
+(defvar window_10_4_icon "")
+(defvar window_10_4_label "")
+(defvar window_10_4_visible true)
+(defvar window_10_4_nid "")
+(defwidget widget_window_10_4 []
+(revealer
+  :reveal {window_10_4_icon != "" || window_10_4_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_4_class} ${focused_window == window_10_4_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_4_nid} --flag hidden=off; bspc node -f ${window_10_4_nid}"
+      (box(image
+      :path window_10_4_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_4_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_4_label != ""}
+    )))
+  ))
+)
+(defvar window_10_5_focused false)
+(defvar window_10_5_class "")
+(defvar window_10_5_icon "")
+(defvar window_10_5_label "")
+(defvar window_10_5_visible true)
+(defvar window_10_5_nid "")
+(defwidget widget_window_10_5 []
+(revealer
+  :reveal {window_10_5_icon != "" || window_10_5_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_5_class} ${focused_window == window_10_5_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_5_nid} --flag hidden=off; bspc node -f ${window_10_5_nid}"
+      (box(image
+      :path window_10_5_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_5_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_5_label != ""}
+    )))
+  ))
+)
+(defvar window_10_6_focused false)
+(defvar window_10_6_class "")
+(defvar window_10_6_icon "")
+(defvar window_10_6_label "")
+(defvar window_10_6_visible true)
+(defvar window_10_6_nid "")
+(defwidget widget_window_10_6 []
+(revealer
+  :reveal {window_10_6_icon != "" || window_10_6_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_6_class} ${focused_window == window_10_6_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_6_nid} --flag hidden=off; bspc node -f ${window_10_6_nid}"
+      (box(image
+      :path window_10_6_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_6_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_6_label != ""}
+    )))
+  ))
+)
+(defvar window_10_7_focused false)
+(defvar window_10_7_class "")
+(defvar window_10_7_icon "")
+(defvar window_10_7_label "")
+(defvar window_10_7_visible true)
+(defvar window_10_7_nid "")
+(defwidget widget_window_10_7 []
+(revealer
+  :reveal {window_10_7_icon != "" || window_10_7_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_7_class} ${focused_window == window_10_7_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_7_nid} --flag hidden=off; bspc node -f ${window_10_7_nid}"
+      (box(image
+      :path window_10_7_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_7_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_7_label != ""}
+    )))
+  ))
+)
+(defvar window_10_8_focused false)
+(defvar window_10_8_class "")
+(defvar window_10_8_icon "")
+(defvar window_10_8_label "")
+(defvar window_10_8_visible true)
+(defvar window_10_8_nid "")
+(defwidget widget_window_10_8 []
+(revealer
+  :reveal {window_10_8_icon != "" || window_10_8_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_8_class} ${focused_window == window_10_8_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_8_nid} --flag hidden=off; bspc node -f ${window_10_8_nid}"
+      (box(image
+      :path window_10_8_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_8_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_8_label != ""}
+    )))
+  ))
+)
+(defvar window_10_9_focused false)
+(defvar window_10_9_class "")
+(defvar window_10_9_icon "")
+(defvar window_10_9_label "")
+(defvar window_10_9_visible true)
+(defvar window_10_9_nid "")
+(defwidget widget_window_10_9 []
+(revealer
+  :reveal {window_10_9_icon != "" || window_10_9_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_9_class} ${focused_window == window_10_9_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_9_nid} --flag hidden=off; bspc node -f ${window_10_9_nid}"
+      (box(image
+      :path window_10_9_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_9_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_9_label != ""}
+    )))
+  ))
+)
+(defvar window_10_10_focused false)
+(defvar window_10_10_class "")
+(defvar window_10_10_icon "")
+(defvar window_10_10_label "")
+(defvar window_10_10_visible true)
+(defvar window_10_10_nid "")
+(defwidget widget_window_10_10 []
+(revealer
+  :reveal {window_10_10_icon != "" || window_10_10_label != ""}
+  :duration "1000ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_window ${window_10_10_class} ${focused_window == window_10_10_nid ? "focused" : "defocused"}"
+    :spacing 0
+    :width 40
+    :height 40
+    (eventbox
+      :onclick "bspc node ${window_10_10_nid} --flag hidden=off; bspc node -f ${window_10_10_nid}"
+      (box(image
+      :path window_10_10_icon
+      :image-width 36
+      :image-height 36
+      :class "ws_icon"
+      :halign "center"
+    )
+    (label
+      :text window_10_10_label
+      :halign "center"
+      :valign "center"
+      :class "ws_label"
+      :visible {window_10_10_label != ""}
+    )))
+  ))
+)
+(defwidget desktop_10 []
+(revealer
+  :reveal {desktop_10_visible}
+  :duration "500ms"
+  :transition "slideright"
+  :halign "center"
+  (box
+    :class "ws_desktop ${desktop_10_class} ${focused_desktop == desktop_10_did ? "focused" : "defocused"} ${desktop_10_icon != "" || desktop_10_label != "" ? "visible" : "invisible"}"
+    :spacing 0
+    :space-evenly false
+    :halign "center"
+    (eventbox
+      :onclick "bspc desktop -f ^10"
+      (box
+        (image
+          :path desktop_10_icon
+          :image-width {desktop_10_icon == "" ? 0 : 36}
+          :image-height {desktop_10_icon == "" ? 0 : 36}
+          :class "ws_icon"
+          :visible {desktop_10_icon != ""}
+          :halign "center"
+        )
+        (label
+          :text desktop_10_label
+          :class "ws_label"
+          :halign "center"
+          :valign "center"
+        )
+      )
+    )
+    (widget_window_10_1)
+    (widget_window_10_2)
+    (widget_window_10_3)
+    (widget_window_10_4)
+    (widget_window_10_5)
+    (widget_window_10_6)
+    (widget_window_10_7)
+    (widget_window_10_8)
+    (widget_window_10_9)
+    (widget_window_10_10)
+  ))
+)
+(defwidget widget_desktops []
+  (box
+    :spacing 0
+    :halign "center"
+    :valign "center"
+    :space-evenly false
+    :class "workspaces"
+    (desktop_1)
+    (desktop_2)
+    (desktop_3)
+    (desktop_4)
+    (desktop_5)
+    (desktop_6)
+    (desktop_7)
+    (desktop_8)
+    (desktop_9)
+    (desktop_10)
+  )
+)

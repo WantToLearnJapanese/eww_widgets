@@ -1,0 +1,25 @@
+; datetime
+
+(defpoll datetime_
+  :interval "1s"
+  "./yucks/datetime/script.sh"
+)  ; datetime_ JSON
+
+(defwidget datetime []
+  (box
+    :orientation "vertical"
+    :spacing 0
+    :space-evenly false
+    :class "datetime"
+    :halign "end"
+    :valign "center"
+    (label
+      :class "date"
+      :text "${datetime_.date} (${datetime_.day})"
+    )  ; datetime_.date,day label
+    (label
+      :class "time"
+      :text "${datetime_.time}"
+    )  ; datetime_.time label
+  )
+)  ; datetime defwidget

@@ -1,0 +1,155 @@
+(deflisten playing_
+  "./yucks/now_playing/script.sh"
+)  ; playing_ JSON
+(defvar playing_popup_visible false)
+(defvar playing_popup_ts 0)
+(defvar playing_popup_timeout 5)
+
+(defwidget playing []
+  (eventbox
+    :onclick "eww update playing_popup_visible=${!playing_popup_visible}; eww update playing_popup_ts=${EWW_TIME}"
+    :valign "center"
+    :halign "center"
+    (revealer
+      :reveal {playing_.status != "Stopped"}
+      :transition "slideright"
+      :duration "1000ms"
+      (stack
+        :selected {playing_popup_visible && EWW_TIME - playing_popup_ts < playing_popup_timeout ? 1 : 0}
+        :transition "slideright"
+        :duration "2000ms"
+        :same-size false
+        :orientation "v"
+        :spacing 0
+        :space-evenly false
+        ; :valign "center"
+        :halign "center"
+        (playing_default)
+        (playing_popup)
+      )
+    )  ; box for playing column
+  )
+) ; playing
+
+(defwidget playing_default []
+  (eventbox
+    :class "playing"
+    ; :onhover "eww update playing_popup_ts=${EWW_TIME}; eww update playing_popup_visible=true"
+    (box
+      ; :class "playing"
+      :orientation "h"
+      :spacing 0
+      :space-evenly false
+      ; :valign "center"
+      :halign "center"
+      (image
+        :class "thumbnail"
+        :halign "center"
+        ; :valign "center"
+        :image-height 40
+        :path {replace(playing_.thumbnail, "file://", "")}
+      )
+      (box
+        :class "label"
+        :orientation "v"
+        :spacing 0
+        :space-evenly false
+        :halign "center"
+        ; :valign "center"
+        (label
+          :class "artist"
+          :text {playing_.artist}
+          :limit-width 20
+        )
+        (label
+          :class "title"
+          :text {playing_.title}
+          :limit-width 30
+        )
+      )
+    )
+  )
+)
+
+(defwidget playing_popup []
+  (eventbox
+    :onhover "eww update playing_popup_ts=${EWW_TIME}"
+    :onhoverlost "eww update playing_popup_visible=false"
+    (box
+      :class "playing_popup"
+      :orientation "h"
+      :spacing 0
+      :space-evenly false
+      :valign "center"
+      :halign "center"
+      :visible {playing_.status != "Stopped"}
+      (image
+        :class "thumbnail"
+        :image-height 200
+        :width 5
+        :path {replace(playing_.thumbnail, "file://", "")}
+      )
+      (box
+        :class "label"
+        :orientation "v"
+        :spacing 10
+        :space-evenly false
+        :halign "center"
+        :valign "center"
+        (label
+          :class "artist"
+          :halign "center"
+          :valign "center"
+          :text {playing_.artist}
+          :textalign "center"
+          :wrap true
+        )
+        (label
+          :class "title"
+          :halign "center"
+          :valign "center"
+          :textalign "center"
+          :truncate false
+          :show-truncated false
+          :limit-width 30
+          :hexpand true
+          :vexpand true
+          :wrap true
+          :text {playing_.title}
+        )
+        (box
+          :class "controls"
+          :orientation "h"
+          :spacing 30
+          :space-evenly false
+          :valign "center"
+          :halign "center"
+          :width 5
+          (button
+            :halign "center"
+            :valign "center"
+            :onclick "playerctl stop"
+            ""
+          )
+          (button
+            :halign "center"
+            :valign "center"
+            :onclick "playerctl previous"
+            "󰒮"
+          )
+          (button
+            :halign "center"
+            :valign "center"
+            :onclick "playerctl play-pause"
+            "${playing_.status == "Paused" ? "" : ""}"
+          )
+          (button
+            :halign "center"
+            :valign "center"
+            :onclick "playerctl next"
+            "󰒭"
+          )
+        ) ; box <prev> <play/pause> <next> controls
+      ) ; box label artist, title, controls
+    )) ; box playing popup
+) ; playing_popup defwidget

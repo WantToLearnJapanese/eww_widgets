@@ -1,0 +1,14 @@
+(deflisten theme_  "./yucks/theme/script.sh")
+
+(defwidget theme []
+  (box
+    :class "theme"
+    (eventbox
+      :onclick "xfconf-query -c xsettings -p /Net/ThemeName -s ${theme_ == "light" ? "Adwaita-dark" : "Adwaita"}"
+      (label
+        :class "icon"
+        :text {theme_ == "light" ? " " : "󰖔 "}
+      )
+    )
+  )
+)

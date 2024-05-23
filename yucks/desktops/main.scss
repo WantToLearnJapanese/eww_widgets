@@ -1,0 +1,123 @@
+$ws_desktop_border_radius: 15px;
+$ws_desktop_padding_y: 2px;
+$ws_desktop_padding_x: 5px;
+$ws_desktop_margin_right: 4px;
+
+$ws_desktop_label_border_radius: 15px;
+$ws_desktop_label_padding_y: 5px;
+$ws_desktop_label_padding_x: 10px;
+$ws_desktop_label_margin_x: 4px;
+$ws_desktop_focused_label_border_radius: 15px;
+
+$ws_window_border_radius: 30px;
+$ws_window_padding: 5px;
+$ws_window_margin_x: 0px;
+
+$ws_window_icon_margin: 0px;
+$ws_window_icon_padding_y: 5px;
+$ws_window_icon_padding_x: 10px;
+
+$ws_window_icon_transition: 1.0s;
+$ws_desktop_label_transition: 0.8s;
+$ws_window_icon_transition_method: ease;
+$ws_desktop_label_transition_method: ease;
+
+@mixin light-theme {
+  $ws_desktop_bg: #ffffff;
+  $ws_desktop_label_fg: #333333;
+  $ws_desktop_label_bg: #e0e0e0;
+  $ws_desktop_focused_label_fg: #ffffff;
+  $ws_desktop_focused_label_bg: #007acc;
+
+  $ws_window_bg: #ffffff;
+  $ws_window_focused_bg: #007acc;
+  $ws_window_icon_bg: #f0f0f0;
+  $ws_window_focused_icon_bg: #007acc;
+}
+
+
+@mixin dark-theme {
+  $ws_desktop_bg: #2e2e2e;
+  $ws_desktop_label_fg: #f0f0f0;
+  $ws_desktop_label_bg: #3a3a3a;
+  $ws_desktop_focused_label_fg: #ffffff;
+  $ws_desktop_focused_label_bg: #007acc;
+  $ws_desktop_border_color: #a0a0a0;
+
+  $ws_window_bg: #1e1e2e;
+  $ws_window_focused_bg: #007acc;
+  $ws_window_icon_bg: #3a3a3a;
+  $ws_window_focused_icon_bg: #007acc;
+}
+
+$ws_desktop_bg: #2e2e2e;
+$ws_desktop_label_fg: #f0f0f0;
+$ws_desktop_label_bg: #3a3a3a;
+$ws_desktop_label_border_color: transparent;
+$ws_desktop_focused_label_fg: #ffffff;
+$ws_desktop_focused_label_bg: #1f85e6;
+$ws_desktop_focused_label_border_color: gray;
+
+$ws_window_bg: $ws_desktop_bg;
+$ws_window_focused_bg: #007acc;
+$ws_window_icon_bg: $ws_desktop_bg;
+$ws_window_focused_icon_bg: #007acc;
+
+
+
+
+
+.workspaces {
+  .ws_desktop.invisible {
+    background-color: $ws_desktop_bg;
+    border-radius: $ws_desktop_border_radius;
+    // padding: $ws_desktop_padding_y $ws_desktop_padding_x;
+  }
+
+  .ws_desktop.visible.focused .ws_label {
+    color: $ws_desktop_focused_label_fg;
+    background-color: $ws_desktop_focused_label_bg;
+    border-radius: $ws_desktop_focused_label_border_radius;
+    box-shadow: rgb(0, 0, 255) 1.95px 1.95px 2.6px;
+  }
+  
+  .ws_desktop.visible {
+    background-color: $ws_desktop_bg;
+    border-radius: $ws_desktop_border_radius;
+    padding: $ws_desktop_padding_y $ws_desktop_padding_x;
+    margin-right: $ws_desktop_margin_right;
+
+    .ws_label {
+      color: $ws_desktop_label_fg;
+      background-color: $ws_desktop_label_bg;
+      border-radius: $ws_desktop_label_border_radius;
+      padding: $ws_desktop_label_padding_y $ws_desktop_label_padding_x;
+      margin-left: $ws_desktop_label_margin_x;
+      margin-right: $ws_desktop_label_margin_x;
+      text-shadow: black 1px 1px 1px;
+
+      transition: all $ws_desktop_label_transition $ws_desktop_label_transition_method;
+      box-shadow: rgb(0, 0, 0) 1.95px 1.95px 2.6px;
+    }
+
+    .ws_window.focused .ws_icon {
+      background-color: $ws_window_focused_icon_bg;
+      border-radius: $ws_window_border_radius;
+      box-shadow: rgba(0, 0, 255, 0.5) 1.95px 1.95px 2.6px;
+    }
+
+    .ws_window {
+      background-color: $ws_window_bg;
+      border-radius: $ws_window_border_radius;
+      padding: $ws_window_padding;
+      margin-right: $ws_window_margin_x;
+
+      .ws_icon {
+        background-color: $ws_window_icon_bg;
+        margin-right: $ws_window_icon_margin;
+        padding: $ws_window_icon_padding_y $ws_window_icon_padding_x;
+        transition: all $ws_window_icon_transition $ws_window_icon_transition_method;
+      }
+    }
+  }
+}

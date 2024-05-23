@@ -1,0 +1,11 @@
+// scss for battery widget
+.battery {
+    background-color: #2e2e2e;
+    border-radius: 15px;
+    // border: 1px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+    .icon, .label {
+        padding: 0;
+    }
+}

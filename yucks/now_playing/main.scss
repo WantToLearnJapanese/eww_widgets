@@ -1,0 +1,65 @@
+// Now_playing SCSS
+
+
+
+@mixin magic-border($width, $color, $duration, $direction) {
+    position: relative;
+}
+
+.playing {
+    background-color: #3a3a3a;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 1.0) 0px 22px 70px 4px;
+
+    .artist {
+        color: #f0f0f0;
+        font-size: xx-small
+    }
+
+    .title {
+        color: #f0f0f0;
+        font-size: x-small
+    }
+
+    .artist,
+    .title {
+        margin-left: 10px;
+        margin-right: 5px;
+        text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
+    }
+
+    .thumbnail {
+        margin-left: 10px;
+    }
+
+}
+
+.playing_popup {
+    background-color: #3a3a3a;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+
+    .artist {
+        color: #f0f0f0;
+        font-size: x-large
+    }
+
+    .title {
+        color: #f0f0f0;
+        font-size: medium
+    }
+
+    .artist,
+    .title {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .thumbnail {
+        margin: 10px;
+    }
+
+    button {
+        font-size: xx-large;
+    }
+}

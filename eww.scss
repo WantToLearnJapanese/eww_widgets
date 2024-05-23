@@ -1,0 +1,22 @@
+// eww.scss
+// SCSS for EWW bar.
+// Some of the styles are different with the Web version.
+
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font";
+  color: white;
+}
+
+// Left
+@import "./yucks/desktops/main.scss";
+@import "./yucks/desktop_new_btn/main.scss";
+
+// Right
+@import "./yucks/battery/main.scss";
+@import "./yucks/datetime/main.scss";
+@import "./yucks/network/main.scss";
+@import "./yucks/theme/main.scss";
+
+// Center
+@import "./yucks/now_playing/main.scss";

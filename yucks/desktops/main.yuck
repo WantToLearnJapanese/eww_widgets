@@ -1,0 +1,11 @@
+(include "./yucks/desktops/workspaces.yuck")
+(deflisten run_workspaces "./yucks/desktops/script.py")
+(defwidget workspaces_ []
+    (box
+        (widget_desktops)
+        (label
+            :visible false
+            :text {run_workspaces}
+        )
+    )
+)

@@ -1,0 +1,10 @@
+(defwidget desktop_new_btn []
+  (eventbox
+    :class "desktop_new"
+    :onclick "bspc monitor -a 1"
+    (label
+        :class "icon button"
+        :text "+"
+    )
+  )
+)

@@ -1,0 +1,26 @@
+(deflisten network_
+  "./yucks/network/script.sh"
+)  ; network_ JSON
+
+(defwidget network []
+  (box
+    :class "network"
+    :orientation "h"
+    :spacing 0
+    :space-evenly false
+    :valign "center"
+    :halign "center"
+    :height 60
+    (label
+      :class "icon"
+      :valign "center"
+      :halign "center"
+      :text {network_.ip != "" ?
+      network_.is_wifi ? " "
+      : " 󰱓 "
+      : " 󰅛 "
+      }
+      :css "label{ ${network_.ip != "" ? 'color: #ffffff' : 'color: #ff0000'}}"
+    )  ; box
+  )
+) ; network

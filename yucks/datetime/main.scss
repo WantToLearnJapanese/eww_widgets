@@ -1,0 +1,15 @@
+// datetime widget scss
+.datetime {
+    background-color: #2e2e2e;
+    .date{
+        font-size: x-small;
+    }
+    .time {
+        font-size: small;
+    }
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    // border: 1px solid white;
+}
