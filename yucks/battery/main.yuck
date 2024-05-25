@@ -1,4 +1,4 @@
-(defpoll battery_
+(deflisten battery_
   :interval "3s"
   "./yucks/battery/script.sh"
 ) ; defpoll battery JSON
@@ -15,7 +15,7 @@
       :image-width 40
       :path {battery_?.percentage == 100 ?
       "./yucks/battery/images/full.png" :
-      battery_?.status == "Charging" ?
+      battery_?.status == "charging" ?
       "./yucks/battery/images/charging.png" :
       battery_?.percentage >= 80 ?
       "./yucks/battery/images/high.png" :

@@ -1,57 +1,25 @@
 #!/usr/bin/env bash
 
-# Function to get the active interface
-get_active_interface() {
-  local interface=$(nmcli -t -f DEVICE,STATE d | grep ':connected$' | cut -d: -f1 | head -n 1)
-  echo "$interface"
-}
-
-# Function to get the SSID
-get_ssid() {
-  local ssid=$(nmcli -t -f ACTIVE,SSID dev wifi | grep '^yes' | cut -d: -f2)
-  echo "$ssid"
-}
-
-# Function to get the IP address
-get_ip_address() {
-  local interface=$1
-  if [ -z "$interface" ]; then
+# Function to get network details
+get_network_details() {
+  local device=$(nmcli -t -f DEVICE,STATE d | grep ':connected$' | cut -d: -f1 | head -n 1)
+  if [ -n "$device" ]; then
+    nmcli -t -f GENERAL.STATE,GENERAL.DEVICE,GENERAL.CONNECTION,IP4.ADDRESS,IP4.GATEWAY,IP4.DNS dev show "$device"
+  else
     echo ""
-    return
   fi
-  local ip=$(nmcli -t -f IP4.ADDRESS dev show "$interface" | grep -oP '\d+(\.\d+){3}')
-  echo "$ip"
 }
 
-# Function to get the default gateway
-get_default_gateway() {
-  local interface=$1
-  if [ -z "$interface" ]; then
-    echo ""
-    return
-  fi
-  local gateway=$(nmcli -t -f IP4.GATEWAY dev show "$interface" | cut -d: -f2)
-  echo "$gateway"
-}
+# Function to parse network details
+parse_network_details() {
+  local details="$1"
+  local state=$(echo "$details" | grep -E '^GENERAL.STATE:' | cut -d: -f2)
+  local device=$(echo "$details" | grep -E '^GENERAL.DEVICE:' | cut -d: -f2)
+  local ssid=$(echo "$details" | grep -E '^GENERAL.CONNECTION:' | cut -d: -f2)
+  local ip_address=$(echo "$details" | grep -E '^IP4.ADDRESS\[1\]:' | cut -d: -f2 | cut -d/ -f1)
+  local default_gateway=$(echo "$details" | grep -E '^IP4.GATEWAY:' | cut -d: -f2)
+  local dns_servers=$(echo "$details" | grep -E '^IP4.DNS\[[0-9]+\]:' | cut -d: -f2 | paste -s -d, -)
 
-# Function to get the DNS servers
-get_dns_servers() {
-  local interface=$1
-  if [ -z "$interface" ]; then
-    echo ""
-    return
-  fi
-  local dns=$(nmcli -t -f IP4.DNS dev show "$interface" | cut -d: -f2 | paste -s -d, -)
-  echo "$dns"
-}
-
-# Function to print network status in JSON
-print_network_status() {
-  local interface=$(get_active_interface)
-  local ssid=$(get_ssid)
-  local ip_address=$(get_ip_address "$interface")
-  local default_gateway=$(get_default_gateway "$interface")
-  local dns_servers=$(get_dns_servers "$interface")
   local is_wifi="true"
   if [ -z "$ssid" ]; then
     is_wifi="false"
@@ -71,6 +39,16 @@ EOF
 
   # Print in a single line
   echo "$json_output" | jq -c .
+}
+
+# Function to print network status
+print_network_status() {
+  local details=$(get_network_details)
+  if [ -n "$details" ]; then
+    parse_network_details "$details"
+  else
+    echo '{"ssid": "", "ip": "", "default_gateway": "", "dns_servers": "", "is_wifi": "false"}' | jq -c .
+  fi
 }
 
 # Function to monitor network changes using nmcli
