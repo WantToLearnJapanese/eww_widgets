@@ -9,14 +9,14 @@
 }
 
 // Left
-@import "./yucks/desktops/main.scss";
-@import "./yucks/desktop_new_btn/main.scss";
+@import "./widgets/desktops/main.scss";
+@import "./widgets/desktop_new_btn/main.scss";
 
 // Right
-@import "./yucks/battery/main.scss";
-@import "./yucks/datetime/main.scss";
-@import "./yucks/network/main.scss";
-@import "./yucks/theme/main.scss";
+@import "./widgets/battery/main.scss";
+@import "./widgets/datetime/main.scss";
+@import "./widgets/network/main.scss";
+@import "./widgets/theme/main.scss";
 
 // Center
-@import "./yucks/now_playing/main.scss";
+@import "./widgets/now_playing/main.scss";

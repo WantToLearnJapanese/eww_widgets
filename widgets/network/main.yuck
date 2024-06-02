@@ -1,5 +1,5 @@
 (deflisten network_
-  "./yucks/network/script.sh"
+  "./widgets/network/script.sh"
 )  ; network_ JSON
 
 (defwidget network []
@@ -24,3 +24,4 @@
     )  ; box
   )
 ) ; network
+

@@ -1,7 +1,7 @@
 (deflisten battery_
   :interval "3s"
-  "./yucks/battery/script.sh"
-) ; defpoll battery JSON
+  "./widgets/battery/script.sh"
+) ; deflisten battery JSON
 
 
 (defwidget battery []
@@ -14,14 +14,14 @@
       :class "icon"
       :image-width 40
       :path {battery_?.percentage == 100 ?
-      "./yucks/battery/images/full.png" :
+      "./widgets/battery/images/full.png" :
       battery_?.status == "charging" ?
-      "./yucks/battery/images/charging.png" :
+      "./widgets/battery/images/charging.png" :
       battery_?.percentage >= 80 ?
-      "./yucks/battery/images/high.png" :
+      "./widgets/battery/images/high.png" :
       battery_?.percentage >= 50 ?
-      "./yucks/battery/images/middle.png" :
-      "./yucks/battery/images/low.png"
+      "./widgets/battery/images/middle.png" :
+      "./widgets/battery/images/low.png"
       }
     )  ; image; battery image
     (label
@@ -30,3 +30,4 @@
     )  ; label; battery percentage
   )
 ) ; defwidget battery
+

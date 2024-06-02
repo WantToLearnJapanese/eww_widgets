@@ -1,6 +1,6 @@
 #### Widgets
 
-- Workspaces
+- [Workspaces](./widgets/workspaces) ![workspaces](./widgets/desktops/workspaces.webp)
 - Now-Playing
 - Network
 - Battery
@@ -8,6 +8,8 @@
 - Color-scheme
 
 #### Todo
+
+- [ ] Save/Load a configuration file. (per hostname and monitor name with a sane default)
 - [ ] Rewrite every widget to be dynamically sized depending on the screen size. (by `xrandr` command)
 - [ ] Make the new widget for `Trays`.
 - [ ] `Workspaces`

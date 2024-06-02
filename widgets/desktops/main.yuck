@@ -1,5 +1,5 @@
-(include "./yucks/desktops/workspaces.yuck")
-(deflisten run_workspaces "./yucks/desktops/script.py")
+(include "./widgets/desktops/workspaces.yuck")
+(deflisten run_workspaces "./widgets/desktops/script.py")
 (defwidget workspaces_ []
     (box
         (widget_desktops)

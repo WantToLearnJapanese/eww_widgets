@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# N_MONITORS=1
+N_MONITORS=2
 N_DESKTOPS=10
 N_WINDOWS=10
 
@@ -8,10 +8,9 @@ HALIGN="\"center\""
 VALIGN="\"center\""
 
 function generate_desktops {
-    # num_desktops = $1 if $1 is set, else $NUM_DESKTOPS
-    # num_windows = $2 if $2 is set, else $NUM_WINDOWS
-    local n_desktops=${1:-$N_DESKTOPS}
-    local n_windows=${2:-$N_WINDOWS}
+    local n_monitors=${1:-$N_MONITORS}
+    local n_desktops=${2:-$N_DESKTOPS}
+    local n_windows=${3:-$N_WINDOWS}
 
     local desktops_yuck=""
     desktops_yuck+="(defvar focused_desktop -1)\n"

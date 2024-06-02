@@ -1,9 +1,8 @@
 (deflisten playing_
-  "./yucks/now_playing/script.sh"
+  "./widgets/now_playing/script.sh"
 )  ; playing_ JSON
 (defvar playing_popup_visible false)
 (defvar playing_popup_ts 0)
-(defvar playing_popup_timeout 5)
 
 (defwidget playing []
   (eventbox
@@ -12,12 +11,12 @@
     :halign "center"
     (revealer
       :reveal {playing_.status != "Stopped"}
-      :transition "slideright"
-      :duration "1000ms"
+      :transition {config.playing.revealer_transition}
+      :duration {config.playing.revealer_duration}
       (stack
-        :selected {playing_popup_visible && EWW_TIME - playing_popup_ts < playing_popup_timeout ? 1 : 0}
-        :transition "slideright"
-        :duration "2000ms"
+        :selected {playing_popup_visible && EWW_TIME - playing_popup_ts < config.playing.popup_timeout ? 1 : 0}
+        :transition {config.playing.stack_transition}
+        :duration {config.playing.stack_duration}
         :same-size false
         :orientation "v"
         :spacing 0
@@ -34,9 +33,7 @@
 (defwidget playing_default []
   (eventbox
     :class "playing"
-    ; :onhover "eww update playing_popup_ts=${EWW_TIME}; eww update playing_popup_visible=true"
     (box
-      ; :class "playing"
       :orientation "h"
       :spacing 0
       :space-evenly false
@@ -46,7 +43,7 @@
         :class "thumbnail"
         :halign "center"
         ; :valign "center"
-        :image-height 40
+        :image-height {config.playing.default.thumbnail_image_height}
         :path {replace(playing_.thumbnail, "file://", "")}
       )
       (box
@@ -85,7 +82,7 @@
       :visible {playing_.status != "Stopped"}
       (image
         :class "thumbnail"
-        :image-height 200
+        :image-height {config.playing.popup.thumbnail_image_height}
         :width 5
         :path {replace(playing_.thumbnail, "file://", "")}
       )
@@ -111,7 +108,7 @@
           :textalign "center"
           :truncate false
           :show-truncated false
-          :limit-width 30
+          :limit-width {config.playing.popup.title_limit_width}
           :hexpand true
           :vexpand true
           :wrap true

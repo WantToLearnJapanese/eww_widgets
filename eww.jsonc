@@ -1,0 +1,28 @@
+// eww.jsonc
+{
+    // Playing-now
+    "playing": {
+        "revealer_transition": "slideright",
+        "revealer_duration": "100ms",
+        "stack_transition": "slideright",
+        "stack_duration": "500ms",
+        "popup_timeout": 5, // seconds
+        "default": {
+            "thumbnail_image_height": 40,
+            "artist_limit_width": 20,
+            "title_limit_width": 30
+        },
+        "popup": {
+            "thumbnail_image_height": 200,
+            "artist_limit_width": 20,
+            "title_limit_width": 30
+        }
+    },
+    // Workspaces
+    "workspaces": {
+        "window_icon_image_height": 36,
+        "window_icon_image_width": 36,
+        "window_reveal_transition": "slideright",
+        "window_reveal_duration": "500ms"
+    }
+}

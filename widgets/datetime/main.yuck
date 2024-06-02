@@ -2,7 +2,7 @@
 
 (defpoll datetime_
   :interval "1s"
-  "./yucks/datetime/script.sh"
+  "./widgets/datetime/script.sh"
 )  ; datetime_ JSON
 
 (defwidget datetime []

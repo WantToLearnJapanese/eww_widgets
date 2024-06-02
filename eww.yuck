@@ -1,22 +1,22 @@
+;; Config
+(include "./widgets/config_loader/main.yuck")
+
+
 ;; Left bar
 ;;  - Workspaces
-(include "./yucks/desktops/main.yuck")
-(include "./yucks/desktop_new_btn/main.yuck")
+(include "./widgets/desktops/main.yuck")
+(include "./widgets/desktop_new_btn/main.yuck")
 
 (defwindow leftbar
   :geometry (geometry
     :x "40"
     :y "15"
-    :width 0
+    :width -1
     :height "50"
     :anchor "top left"
-    :halign "start"
-    :valign "center"
   )
-  :stacking "bg"
+  :stacking "fg"
   :windowtype "dock"
-  :halign "center"
-  :valign "center"
   :wm-ignore true
   :resizable false
   (box
@@ -28,17 +28,17 @@
     :spacing 0
     (workspaces_)
     (desktop_new_btn)
-  )
+   )
 )
 
 ;; Right of the bar
 ;; Network
 ;; Battery
 ;; DateTime
-(include "./yucks/network/main.yuck")
-(include "./yucks/battery/main.yuck")
-(include "./yucks/datetime/main.yuck")
-(include "./yucks/theme/main.yuck")
+(include "./widgets/network/main.yuck")
+(include "./widgets/battery/main.yuck")
+(include "./widgets/datetime/main.yuck")
+(include "./widgets/theme/main.yuck")
 
 
 
@@ -70,7 +70,7 @@
   )
 )
 
-(include "./yucks/now_playing/main.yuck")
+(include "./widgets/now_playing/main.yuck")
 
 (defwindow centerbar
   :geometry (geometry

@@ -1,0 +1,4 @@
+(defpoll config
+  :interval "30s"
+  "./widgets/config_loader/script.py"
+)
